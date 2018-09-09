@@ -6,11 +6,15 @@
         </h2>
     </section>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
             @include('partials.shopNav')
         </div>
-        <div class="col-md-8">
-            @include('shopPartials.shopHome')
+        <div class="col-md-9">
+            @if(isset($items))
+                @include('shopPartials.storeFront');
+            @else
+                @include('shopPartials.shopHome')
+            @endif
         </div>
     </div>
 

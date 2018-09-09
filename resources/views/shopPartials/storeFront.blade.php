@@ -1,6 +1,6 @@
 <div class="row">
     @php($i = 0)
-    @for($i ; $i < 4; $i++)
+    @for($i ; $i < 2; $i++)
         <div class="col-md-6 p-b-30 m-lr-auto">
             <!-- Block1 -->
             <div class="block1 wrap-pic-w">

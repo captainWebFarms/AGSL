@@ -19,9 +19,11 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/account', 'AccountController@index')->name('account');
-Route::get('/shop', 'ShopController@index')->name('account');
-Route::get('/about', 'AboutController@index')->name('account');
-Route::get('/contact', 'ContactController@index')->name('account');
+Route::get('/shop/{name?}', 'ShopController@index')->name('shop');
+Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/contact', 'ContactController@index')->name('contact');
+//Route::get('/shop/{nav}', 'ShopController@nav');
+
 
 Route::get('/1', function(){return view('tempFiles.tempAbout');});
 Route::get('/2', function(){return view('tempContact');});
