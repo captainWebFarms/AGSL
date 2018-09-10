@@ -5,9 +5,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\DatabaseHandler;
 class ShopController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $cat = $request->cat;
+        $items = $cat;
         $catagories = DatabaseHandler::getCatagories();
-        return view('shop', ['catagories' => $catagories] );
+        return view('shop', compact('catagories','items'));
     }
 }

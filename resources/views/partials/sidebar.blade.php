@@ -112,11 +112,11 @@
 
             <div class="sidebar-gallery w-full">
 					<span class="mtext-101 cl5">
-						About Us
+						Our Mission
 					</span>
 
                 <p class="stext-108 cl6 p-t-27">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus vulputate hendrerit. Praesent faucibus erat vitae rutrum gravida. Vestibulum tempus mi enim, in molestie sem fermentum quis.
+                    Africa Glo Safe Lighting is to provide high quality, low energy, lighting for the mining and industrial sector, focusing on Safety and Energy efficiency, which is need in today’s fast-growing mining and industrial markets.
                 </p>
             </div>
         </div>

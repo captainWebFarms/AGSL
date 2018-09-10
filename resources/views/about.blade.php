@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- Title page -->
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url({{asset('images/bg-01.jpg')}});">
     <h2 class="ltext-105 cl0 txt-center">
         About
     </h2>
@@ -54,7 +54,7 @@
                     </h3>
 
                     <p class="stext-113 cl6 p-b-26">
-                        Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum rhoncus dignissim risus, sed consectetur erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam maximus mauris sit amet odio convallis, in pharetra magna gravida. Praesent sed nunc fermentum mi molestie tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in, porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec venenatis nulla lobortis. Proin at gravida ante. Mauris auctor purus at lacus maximus euismod. Pellentesque vulputate massa ut nisl hendrerit, eget elementum libero iaculis.
+                        Africa Glo Safe Lighting is to provide high quality, low energy, lighting for the mining and industrial sector, focusing on Safety and Energy efficiency, which is need in today’s fast-growing mining and industrial markets.
                     </p>
 
                     <div class="bor16 p-l-29 p-b-9 m-t-22">

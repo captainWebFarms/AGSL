@@ -10,9 +10,12 @@
         foreach($catagory->childs as $catagory){
             if($catagory->childs->count() > 0){
                 echo '<li class="nav-item">
-                        <a href="#" id="btn-'.$x.'" data-toggle="collapse" data-target="#submenu'.$x.'" aria-expanded="false">
+                        <a href="http://127.0.0.1:8000/shop/'.$catagory->catagory.'" >
                             --'.$catagory->catagory.'
                         </a>
+                        <a id="btn-'.$x.'"data-toggle="collapse" data-target="#submenu'.$x.'" aria-expanded="false">
+                        <i class="fas fa-plus pointer"></i>
+                    </a>
                     </li>';
             }else{
                 echo '<li class="nav-item"><a href="#">--------'.$catagory->catagory.'</a></li>';
@@ -22,7 +25,6 @@
                $x = iterator($catagory, $x);
                echo '</ul>';
            }
-
         }
         return $x;
     }

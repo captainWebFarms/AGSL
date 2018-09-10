@@ -19,7 +19,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/account', 'AccountController@index')->name('account');
-Route::get('/shop/{name?}', 'ShopController@index')->name('shop');
+Route::get('/shop/{cat?}', 'ShopController@index')->name('shop');
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/contact', 'ContactController@index')->name('contact');
 //Route::get('/shop/{nav}', 'ShopController@nav');

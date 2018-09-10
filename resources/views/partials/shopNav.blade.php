@@ -4,7 +4,15 @@
         @php($x = 1)
         @foreach ($catagories as $catagory)
             @if($catagory->p_id ==0)
-                <li class="nav-item"><a href="#" id="btn-{{$x}}" data-toggle="collapse" data-target="#submenu{{$x}}" aria-expanded="true">{{$catagory->catagory}}</a>
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000/shop/{{$catagory->catagory}}" >{{$catagory->catagory}}
+                    </a>
+                    <a id="btn-{{$x}}"data-toggle="collapse" data-target="#submenu{{$x}}" aria-expanded="false">
+                        <i class="fas fa-plus pointer"></i>
+                    </a>
+
+
+
             @endif
             @if($catagory->childs->count() > 0)
                 <ul class="collapse" id="submenu{{$x}}" role="menu" aria-labelledby="btn-{{$x++}}">
