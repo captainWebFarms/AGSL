@@ -20,6 +20,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+//        $items = DatabaseHandler::getLinked($cat);
         return view('home');
     }
 }

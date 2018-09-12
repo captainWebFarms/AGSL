@@ -126,3 +126,34 @@
         })
     });
 </script>
+
+<script>
+    function addCart($id){
+        $.ajax({
+            url:'{{asset('/cart/{id}')}}',
+            type:'GET',
+            data:{id: $id},
+            success: function(data){
+                $('#cart').html(data);
+            },
+            error: function(){
+                $('#cart').html('Aww you broke it :\'(');
+            }
+        });
+    }
+
+    function showModal(id){
+        $('.js-show-modal1').on('click',function(e){
+            e.preventDefault();
+            $('#'.id).addClass('show-modal1');
+        });
+    }
+
+    function hideModal(){
+
+
+        // $('.js-hide-modal1').on('click',function(){
+        //     $('.js-modal1').removeClass('show-modal1');
+        // });
+    }
+</script>

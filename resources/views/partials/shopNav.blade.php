@@ -5,7 +5,7 @@
         @foreach ($catagories as $catagory)
             @if($catagory->p_id ==0)
                 <li class="nav-item">
-                    <a href="http://127.0.0.1:8000/shop/{{$catagory->catagory}}" >{{$catagory->catagory}}
+                    <a href="{{asset('/shop/'.$catagory->catagory.'')}}" >{{$catagory->catagory}}
                     </a>
                     <a id="btn-{{$x}}"data-toggle="collapse" data-target="#submenu{{$x}}" aria-expanded="false">
                         <i class="fas fa-plus pointer"></i>

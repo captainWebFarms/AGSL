@@ -6,26 +6,26 @@
 
                 <!-- Logo desktop -->
                 <a href="#" class="logo">
-                    <img src="{{asset('images/icons/logo-02.png')}}" alt="IMG-LOGO">
+                    <img src="{{asset('images/icons/agsl-logo2.png')}}" alt="IMG-LOGO">
                 </a>
 
                 <!-- Menu desktop -->
                 <div class="menu-desktop">
                     <ul class="main-menu">
                         <li>
-                            <a href="home">Home</a>
+                            <a href="{{asset('home')}}">Home</a>
                         </li>
 
                         <li>
-                            <a href="shop">Shop</a>
+                            <a href="{{asset('shop')}}">Shop</a>
                         </li>
 
                         <li>
-                            <a href="about">About</a>
+                            <a href="{{asset('about')}}">About</a>
                         </li>
 
                         <li>
-                            <a href="contact">Contact</a>
+                            <a href="{{asset('contact')}}">Contact</a>
                         </li>
                     </ul>
                 </div>

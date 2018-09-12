@@ -22,6 +22,12 @@ Route::get('/account', 'AccountController@index')->name('account');
 Route::get('/shop/{cat?}', 'ShopController@index')->name('shop');
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/cart/{id?}', 'CartController@index')->name('contact');
+Route::get('/load', 'CartController@load')->name('contact');
+Route::get('/cart/{id?}', 'CartController@index')->name('contact');
+Route::get('/cart/{id?}', 'CartController@index')->name('contact');
+Route::get('/cart/{id?}', 'CartController@index')->name('contact');
+
 //Route::get('/shop/{nav}', 'ShopController@nav');
 
 

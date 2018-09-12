@@ -8,7 +8,7 @@ class ShopController extends Controller
     public function index(Request $request)
     {
         $cat = $request->cat;
-        $items = $cat;
+        $items = DatabaseHandler::getLinked($cat);
         $catagories = DatabaseHandler::getCatagories();
         return view('shop', compact('catagories','items'));
     }
