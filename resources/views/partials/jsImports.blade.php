@@ -128,9 +128,23 @@
 </script>
 
 <script>
-    function addCart($id){
+    function addCart($id, $name, $price, $img, $qty){
         $.ajax({
-            url:'{{asset('/cart/{id}')}}',
+            url:'<?php echo e(asset('/cart/{id}/{name}/{price}/{img}/{qty}')); ?>',
+            type:'GET',
+            data:{id: $id, name: $name, price: $price, img: $img, qty: $qty},
+            success: function(data){
+                $('#cart').html(data);
+            },
+            error: function(){
+                $('#cart').html('Aww you broke it :\'(');
+            }
+        });
+    }
+
+    function loadCart($id){
+        $.ajax({
+            url:'{{asset('/load/{id}')}}',
             type:'GET',
             data:{id: $id},
             success: function(data){
@@ -142,18 +156,17 @@
         });
     }
 
-    function showModal(id){
-        $('.js-show-modal1').on('click',function(e){
-            e.preventDefault();
-            $('#'.id).addClass('show-modal1');
-        });
+
+
+    function showModal($id){
+
+            $('#'+$id).addClass('show-modal1');
+        // $('.js-modal1').addClass('show-modal1');
+
     }
 
-    function hideModal(){
+    function hideModal($id){
 
-
-        // $('.js-hide-modal1').on('click',function(){
-        //     $('.js-modal1').removeClass('show-modal1');
-        // });
+        $('#'+$id).removeClass('show-modal1');
     }
 </script>

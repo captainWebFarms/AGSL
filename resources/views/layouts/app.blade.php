@@ -78,7 +78,7 @@
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     {{--<link rel="stylesheet" href="{{asset('css/cssOveride.css')}}">--}}
 </head>
-<body class="animsition" onload="loadCart()">
+<body class="animsition" onload="loadCart(1)">
         @include('partials.nav')
         @include('cartPartials.cart')
         @include('partials.sidebar')
