@@ -78,7 +78,7 @@
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     {{--<link rel="stylesheet" href="{{asset('css/cssOveride.css')}}">--}}
 </head>
-<body class="animsition" onload="addCart(21)">
+<body class="animsition" onload="loadCart()">
         @include('partials.nav')
         @include('cartPartials.cart')
         @include('partials.sidebar')
@@ -86,5 +86,6 @@
         @include('partials.footer')
         @yield('includes')
         @include('partials.jsImports')
+
 </body>
 </html>

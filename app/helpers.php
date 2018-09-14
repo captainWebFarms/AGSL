@@ -5,27 +5,28 @@
  * Date: 9/9/2018
  * Time: 10:05 PM
  */
-
-    function iterator($catagory, $x){
-        foreach($catagory->childs as $catagory){
-            if($catagory->childs->count() > 0){
-                echo '<li class="nav-item">
-                        <a href="'.asset('/shop/'.$catagory->catagory).'" >
-                            --'.$catagory->catagory.'
-                        </a>
-                        <a id="btn-'.$x.'"data-toggle="collapse" data-target="#submenu'.$x.'" aria-expanded="false">
-                        <i class="fas fa-plus pointer"></i>
-                    </a>
-                    </li>';
-            }else{
-                echo '<li class="nav-item"><a href="'.asset('/shop/'.$catagory->catagory).'">--------'.$catagory->catagory.'</a></li>';
-            }
-           if($catagory->childs->count() > 0 ){
-               echo '<ul class="collapse" id="submenu'.$x.'" role="menu" aria-labelledby="btn-'.$x++.'">';
-               $x = iterator($catagory, $x);
-               echo '</ul>';
-           }
-        }
-        return $x;
+function classChecker($catagory){
+    switch ($catagory->level){
+        case 2:
+            return 'fs-13 p-l-10';
+            break;
+        case 3:
+            return 'fs-12 p-l-20';
+            break;
     }
+}
+
+function iterator($catagory){
+    foreach($catagory->childs as $catagory){
+
+            echo '<li class="nav-item '.classChecker($catagory).'">
+                  <a href="/shop/'.$catagory->catagory.'" style="color:black;">'.$catagory->catagory.'</a>
+                </li>';
+        if(isset($catagory->childs)){
+            echo '<ul class="nav-item">';
+                (iterator($catagory));
+            echo'</ul>';
+        }
+    }
+}
 

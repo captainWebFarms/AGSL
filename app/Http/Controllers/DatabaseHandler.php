@@ -21,6 +21,6 @@ class DatabaseHandler extends Controller
         return Linker::join('catagories', 'linker.catagories_id', '=', 'catagories.id')
             ->join('products', 'linker.products_id', '=', 'products.id')
             ->where('catagories.catagory','=',$cat)
-            ->paginate(12);
+            ->paginate(16);
     }
 }

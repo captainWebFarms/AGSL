@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Cart;
 class HomeController extends Controller
 {
     /**
@@ -20,7 +20,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-//        $items = DatabaseHandler::getLinked($cat);
-        return view('home');
+        $count = Cart::count();
+        return view('home',['count' => $count]);
     }
 }

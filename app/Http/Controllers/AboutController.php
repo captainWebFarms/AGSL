@@ -9,7 +9,7 @@ class AboutController extends Controller
     //
     public function index()
     {
-        $cart = Cart::content();
-        return view('about');
+        $count = Cart::count();
+        return view('about',['count' => $count]);
     }
 }

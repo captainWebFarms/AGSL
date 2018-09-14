@@ -5,7 +5,7 @@
     <section class="section-slide">
         <div class="wrap-slick1 rs2-slick1">
             <div class="slick1">
-                <div class="item-slick1 bg-overlay1" style="background-image: url({{asset('images/Banners/home1.jpg')}});" data-thumb="{{asset('images/Banners/home1.jpg')}}" data-caption="Underground white LED strip lighting">
+                <div class="item-slick1 bg-overlay1" style="background-image: url({{asset('images/Banners/home1.jpg')}});" data-thumb="{{asset('images/Banners/homethumb1.jpg')}}" data-caption="Underground white LED strip lighting">
                     <div class="container h-full">
                         <div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
@@ -16,7 +16,7 @@
 
                             <div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
                                 <h2 class="ltext-104 txt-center cl0 p-t-22 p-b-40 respon1">
-                                    New arrivals
+                                    NEW STOCK
                                 </h2>
                             </div>
 
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 bg-overlay1" style="background-image: url({{asset('images/Banners/home2.jpg')}});" data-thumb="{{asset('images/Banners/home2.jpg')}}" data-caption="Open Pit Mine Solutions">
+                <div class="item-slick1 bg-overlay1" style="background-image: url({{asset('images/Banners/home2.jpg')}});" data-thumb="{{asset('images/Banners/homethumb2.jpg')}}" data-caption="Open Pit Mine Solutions">
                     <div class="container h-full">
                         <div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 bg-overlay1" style="background-image: url({{asset('images/Banners/home3.jpg')}});" data-thumb="{{asset('images/Banners/home3.jpg')}}" data-caption="CUSTOM LED STRIP LIGHTING SOLUTIONS">
+                <div class="item-slick1 bg-overlay1" style="background-image: url({{asset('images/Banners/home3.jpg')}});" data-thumb="{{asset('images/Banners/homethumb3.jpg')}}" data-caption="CUSTOM LED STRIP LIGHTING SOLUTIONS">
                     <div class="container h-full">
                         <div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
@@ -64,7 +64,7 @@
 
                             <div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
                                 <h2 class="ltext-104 txt-center cl0 p-t-22 p-b-40 respon1">
-                                    NEW SEASON
+                                    NEW STOCK
                                 </h2>
                             </div>
 
@@ -90,16 +90,16 @@
                 <div class="col-md-6 p-b-30 m-lr-auto">
                     <!-- Block1 -->
                     <div class="block1 wrap-pic-w">
-                        <img src="images/banner-04.jpg" alt="IMG-BANNER">
+                        <img src="{{asset('images/images/cat1.jpg')}}" alt="IMG-BANNER">
 
                         <a href="tempFiles/tempProduct.blade.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Women
+									Underground white LED strip lighting
 								</span>
 
                                 <span class="block1-info stext-102 trans-04">
-									New Trend
+									New Stock
 								</span>
                             </div>
 
@@ -115,16 +115,16 @@
                 <div class="col-md-6 p-b-30 m-lr-auto">
                     <!-- Block1 -->
                     <div class="block1 wrap-pic-w">
-                        <img src="{{asset('images/Banners/openPit.jpg')}}" alt="IMG-BANNER">
+                        <img src="{{asset('images/images/cat2.jpg')}}" alt="IMG-BANNER">
 
                         <a href="tempFiles/tempProduct.blade.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Men
+									CUSTOM LED STRIP LIGHTING SOLUTIONS
 								</span>
 
                                 <span class="block1-info stext-102 trans-04">
-									New Trend
+									New Stock
 								</span>
                             </div>
 
@@ -140,16 +140,16 @@
                 <div class="col-md-6 col-lg-4 p-b-30 m-lr-auto">
                     <!-- Block1 -->
                     <div class="block1 wrap-pic-w">
-                        <img src="images/banner-07.jpg" alt="IMG-BANNER">
+                        <img src="{{asset('images/images/cat3.jpg')}}" alt="IMG-BANNER">
 
                         <a href="tempFiles/tempProduct.blade.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Watches
+									Safety system colored LED strip lighting
 								</span>
 
                                 <span class="block1-info stext-102 trans-04">
-									Spring 2018
+									Directional light strips
 								</span>
                             </div>
 
@@ -165,16 +165,16 @@
                 <div class="col-md-6 col-lg-4 p-b-30 m-lr-auto">
                     <!-- Block1 -->
                     <div class="block1 wrap-pic-w">
-                        <img src="images/banner-08.jpg" alt="IMG-BANNER">
+                        <img src="{{asset('images/images/cat4.png')}}" alt="IMG-BANNER">
 
                         <a href="tempFiles/tempProduct.blade.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Bags
+									Portable LED work lighting
 								</span>
 
                                 <span class="block1-info stext-102 trans-04">
-									Spring 2018
+									Flashlights, Cap Lamps & Roll Outs
 								</span>
                             </div>
 
@@ -190,16 +190,16 @@
                 <div class="col-md-6 col-lg-4 p-b-30 m-lr-auto">
                     <!-- Block1 -->
                     <div class="block1 wrap-pic-w">
-                        <img src="images/banner-09.jpg" alt="IMG-BANNER">
+                        <img src="{{asset('images/images/cat5.jpg')}}" alt="IMG-BANNER">
 
                         <a href="tempFiles/tempProduct.blade.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Accessories
+									Work area LED lighting
 								</span>
 
                                 <span class="block1-info stext-102 trans-04">
-									Spring 2018
+									Hazardous Area Lights & Globe Strips
 								</span>
                             </div>
 

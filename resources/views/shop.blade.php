@@ -10,10 +10,10 @@
     </section>
     <div class="container m-0 mw-100">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2" style="padding-left: 0;padding-right: 0;">
             @include('partials.shopNav')
         </div>
-        <div class="col-md-9 p-t-30" >
+        <div class="col-md-10 p-t-30" >
             @if($items->count() > 0)
                 @include('shopPartials.storeFront')
             @else

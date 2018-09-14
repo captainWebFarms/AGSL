@@ -11,7 +11,7 @@ class ShopController extends Controller
         $cat = $request->cat;
         $items = DatabaseHandler::getLinked($cat);
         $catagories = DatabaseHandler::getCatagories();
-//        return Cart::content();
-        return view('shop', compact('catagories','items'));
+        $count = Cart::count();
+        return view('shop', compact('catagories','items','count'));
     }
 }
