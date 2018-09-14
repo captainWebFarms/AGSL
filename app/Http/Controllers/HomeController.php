@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Cart;
+use App\Http\Controllers\DatabaseHandler;
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -21,6 +23,8 @@ class HomeController extends Controller
     public function index()
     {
         $count = Cart::count();
-        return view('home',['count' => $count]);
+        $gallery = DatabaseHandler::getGallery();
+        $user = Auth::user();
+        return view('home',compact('count','gallery','user'));
     }
 }

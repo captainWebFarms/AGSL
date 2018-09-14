@@ -5,6 +5,7 @@ use App\Catagory;
 use App\Product;
 use App\Linker;
 use Illuminate\Http\Request;
+use DB;
 
 class DatabaseHandler extends Controller
 {
@@ -12,7 +13,9 @@ class DatabaseHandler extends Controller
     public static function getCatagories(){
         return Catagory::get();
     }
-
+    public static function getGallery(){
+        return DB::select('call galleryProcedure');
+    }
     public static function getProducts(){
         return Product::get();
     }

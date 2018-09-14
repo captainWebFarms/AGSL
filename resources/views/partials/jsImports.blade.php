@@ -142,6 +142,36 @@
         });
     }
 
+    function updateCart($id,$qty){
+
+        $.ajax({
+            url:'{{asset('/cart/update/{id}/{qty}')}}',
+            type:'GET',
+            data:{id: $id, qty: $qty},
+            success: function(data){
+                $('#cart').html(data);
+            },
+            error: function(){
+                $('#cart').html('Aww you broke it :\'(');
+            }
+        });
+    }
+
+    function updateCartNeg($id,$qty){
+
+        $.ajax({
+            url:'{{asset('/cart/updateneg/{id}/{qty}')}}',
+            type:'GET',
+            data:{id: $id, qty: $qty},
+            success: function(data){
+                $('#cart').html(data);
+            },
+            error: function(){
+                $('#cart').html('Aww you broke it :\'(');
+            }
+        });
+    }
+
     function loadCart($id){
         $.ajax({
             url:'{{asset('/load/{id}')}}',

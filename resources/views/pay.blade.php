@@ -19,7 +19,7 @@
 
                         <p class="stext-113 cl6 p-b-26">
 
-                            Thank you for your Business, you will be notified when your order is on its way <br/>
+                            Thank you for your business {{$user->name}}, you will be notified when your order is on its way <br/>
                             -AGSL, Developing Africa.
                         </p>
                     </div>

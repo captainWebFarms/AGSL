@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2018 at 05:35 AM
+-- Generation Time: Sep 14, 2018 at 09:42 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -21,6 +21,45 @@ SET time_zone = "+00:00";
 --
 -- Database: `agsl`
 --
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Firstprocedure` ()  NO SQL
+SELECT *
+FROM viewsarestupid$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `FrameworksMakeProceduresRedundent` ()  NO SQL
+SELECT *
+FROM viewsarestupid2$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `galleryProcedure` ()  NO SQL
+SELECT *
+FROM lastview$$
+
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about_img`
+--
+
+CREATE TABLE `about_img` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `url` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `about_img`
+--
+
+INSERT INTO `about_img` (`id`, `url`, `created_at`, `updated_at`) VALUES
+(1, 'about1.png', '2018-09-14 04:24:17', '2018-09-14 04:24:17'),
+(2, 'about2.jpg', '2018-09-14 04:24:17', '2018-09-14 04:24:17');
 
 -- --------------------------------------------------------
 
@@ -92,6 +131,103 @@ INSERT INTO `catagories` (`id`, `catagory`, `p_id`, `URL`, `level`, `created_at`
 (50, 'Long Range 12v DC', 13, NULL, 3, '2018-09-09 18:09:42', '2018-09-09 18:09:42'),
 (51, 'Long Range 36v AC', 13, NULL, 3, '2018-09-09 18:09:42', '2018-09-09 18:09:42'),
 (52, 'Long Range 24v AC', 13, NULL, 3, '2018-09-09 18:09:42', '2018-09-09 18:09:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `certificates`
+--
+
+CREATE TABLE `certificates` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `certificates`
+--
+
+INSERT INTO `certificates` (`id`, `name`, `url`, `created_at`, `updated_at`) VALUES
+(1, 'AOV UV Resistance Test Report PVC', 'AOV UV Resistance Test Report PVC (002).pdf', NULL, NULL),
+(2, 'Clear in house declaration of conformity to EU RoHS standard', 'Clear in house declaration of conformity to EU RoHS standard.pdf', NULL, NULL),
+(3, 'Clear in house declaration of conformity to Photobiological safety standard', 'Clear in house declaration of conformity to Photobiological safety standard EN62471.pdf', NULL, NULL),
+(4, 'Emtek x-Glo 72-110v Electromagnetic Test Report', 'Emtek x-Glo 72-110v Electromagnetic Test Report to EN62493.pdf', NULL, NULL),
+(5, 'Emtek x-Glo 72-110v EMC Certificate of Conformity', 'Emtek x-Glo 72-110v EMC Certificate of Conformity.pdf', NULL, NULL),
+(6, 'Emtek x-Glo 72-110v EMC Test Report', 'Emtek x-Glo 72-110v EMC Test Report.pdf', NULL, NULL),
+(7, 'Emtek x-Glo 72-110v Luminaires Test Report', 'Emtek x-Glo 72-110v Luminaires Test Report to EN60598-2-21.pdf', NULL, NULL),
+(8, 'Emtek x-Glo 72-110v LVD Certificate of Conformity', 'Emtek x-Glo 72-110v LVD Certificate of Conformity to EN60598.pdf', NULL, NULL),
+(9, 'Emtek x-Glo 72-110v LVD Certificate of Conformity', 'Emtek x-Glo 72-110v LVD Certificate of Conformity to EN62493.pdf', NULL, NULL),
+(10, 'Emtek x-Glo 72-110v Photobiological Test Report', 'Emtek x-Glo 72-110v Photobiological Test Report to EN62471.pdf', NULL, NULL),
+(11, 'Emtek x-Glo Low Voltage EMC Certification', 'Emtek x-Glo Low Voltage EMC Certification.pdf', NULL, NULL),
+(12, 'Emtek x-Glo Low Voltage LVD Certification', 'Emtek x-Glo Low Voltage LVD Certification.pdf', NULL, NULL),
+(13, 'Emtek x-Glo Low Voltage Photobiological Test report', 'Emtek x-Glo Low Voltage Photobiological Test report.pdf', NULL, NULL),
+(14, 'Everfine x-Glo-12-36v Photometric Test Report', 'Everfine x-Glo-12-36v Photometric Test Report.pdf', NULL, NULL),
+(15, 'Everfine x-Glo-18-36v Photometric Test Report', 'Everfine x-Glo-18-36v Photometric Test Report.pdf', NULL, NULL),
+(16, 'Everfine x-Glo-24-36v Photometric Test Report', 'Everfine x-Glo-24-36v Photometric Test Report.pdf', NULL, NULL),
+(17, 'Everfine x-Glo-30-36v Photomeric Test Report', 'Everfine x-Glo-30-36v Photomeric Test Report.pdf', NULL, NULL),
+(18, 'Everfine x-Glo-36-36v Photometric Test Report', 'Everfine x-Glo-36-36v Photometric Test Report.pdf', NULL, NULL),
+(19, 'Everfine x-Glo-36-220v Photometric Test Report', 'Everfine x-Glo-36-220v Photometric Test Report.pdf', NULL, NULL),
+(20, 'Everfine x-Glo-60-24v Photometric Test Report', 'Everfine x-Glo-60-24v Photometric Test Report.pdf', NULL, NULL),
+(21, 'Everfine x-Glo-60-36v Photometric Test Report', 'Everfine x-Glo-60-36v Photometric Test Report.pdf', NULL, NULL),
+(22, 'Everfine x-Glo-72-12v Photometric Test Report', 'Everfine x-Glo-72-12v Photometric Test Report.pdf', NULL, NULL),
+(23, 'Everfine x-Glo-72-110V Photometric Test Report', 'Everfine x-Glo-72-110V Photometric Test Report.pdf', NULL, NULL),
+(24, 'Everfine x-Glo-72-220V Photometric Test Report', 'Everfine x-Glo-72-220V Photometric Test Report.pdf', NULL, NULL),
+(25, 'Everfine x-Glo-60-36V Photometric Test Report', 'Everfine x-Glo-60-36v Photometric Test Report.pdf', NULL, NULL),
+(26, 'ISO9001-2008(2016)-Clear Lighting', 'ISO9001-2008(2016)-Clear Lighting.pdf', NULL, NULL),
+(27, 'SGS EMC Compliance Certification to Standards', 'SGS EMC Compliance Certification to Standards.pdf', NULL, NULL),
+(28, 'SGS IPx5 Test Report - Molding Type Connector', 'SGS IPx5 Test Report - Molding Type Connector.PDF', NULL, NULL),
+(29, 'SGS IPx8 Test Report - Snap Type Connector', 'SGS IPx8 Test Report - Snap Type Connector.pdf', NULL, NULL),
+(30, 'SGS RoHS Enviromental Certification', 'SGS RoHS Enviromental Certification.pdf', NULL, NULL),
+(31, 'TUV Flame Retardence report', 'TUV Flame Retardence report.pdf', NULL, NULL),
+(32, 'UL Certificate of Compliance 120vAC', 'UL Certificate of Compliance 2016.05.31 120vAC.pdf', NULL, NULL),
+(33, 'UL Certificate of Compliance 36vDC', 'UL Certificate of Compliance 2018.03.12 36vDC.pdf', NULL, NULL),
+(34, 'UL Certificate of Compliance 12vDC & 24vDC.pdf', 'UL Certificate of Compliance 2016.02.15 12vDC 24vDC.pdf', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `url` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `thumburl` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `url`, `thumburl`, `created_at`, `updated_at`) VALUES
+(1, 'gal1.jpg', 'galthumb1.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18'),
+(2, 'gal2.jpg', 'galthumb2.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18'),
+(3, 'gal3.jpg', 'galthumb3.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18'),
+(4, 'gal4.jpg', 'galthumb4.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18'),
+(5, 'gal5.jpg', 'galthumb5.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18'),
+(6, 'gal6.jpg', 'galthumb6.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18'),
+(7, 'gal7.jpg', 'galthumb7.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18'),
+(8, 'gal8.jpg', 'galthumb8.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18'),
+(9, 'gal9.jpg', 'galthumb9.jpg', '2018-09-14 05:04:18', '2018-09-14 05:04:18');
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `lastview`
+-- (See below for the actual view)
+--
+CREATE TABLE `lastview` (
+`id` int(10) unsigned
+,`url` varchar(191)
+,`thumburl` varchar(191)
+,`created_at` timestamp
+,`updated_at` timestamp
+);
 
 -- --------------------------------------------------------
 
@@ -612,7 +748,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (13, '2018_09_07_161114_create_catagories_table', 2),
 (14, '2018_09_10_151243_create_products_table', 3),
-(16, '2018_09_11_130736_create_linker_table', 4);
+(16, '2018_09_11_130736_create_linker_table', 4),
+(17, '2018_09_14_041232_creat_about_img_table', 5),
+(18, '2018_09_14_042152_create_about_img_table', 6),
+(19, '2018_09_14_042217_create_certificates_table', 6),
+(20, '2018_09_14_045920_create_gallery_table', 7),
+(21, '2018_09_14_071055_create__counter_table', 8);
 
 -- --------------------------------------------------------
 
@@ -801,16 +942,121 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Zane', 'zane13smith@gmail.com', '$2y$10$d.4ZgwYcuXOXxKgo.U.Cy.Ci.bY.OzdCcR2/cnVnwRm61pQg/71Li', 'fR51SVObZEAKVTy60dpZiWiV86zS2cCGLIFCwFasQbnSVEQsU6DiUIkK2q4d', '2018-09-01 16:35:29', '2018-09-01 16:35:29');
+(1, 'Zane', 'zane13smith@gmail.com', '$2y$10$d.4ZgwYcuXOXxKgo.U.Cy.Ci.bY.OzdCcR2/cnVnwRm61pQg/71Li', 'fR51SVObZEAKVTy60dpZiWiV86zS2cCGLIFCwFasQbnSVEQsU6DiUIkK2q4d', '2018-09-01 16:35:29', '2018-09-01 16:35:29'),
+(2, 'james', 'james@gmail.com', '$2y$10$aMPNUNPZptrBqJrftFgdH.Sz1CFkXSC/nzYxMtSB9jb0R5OjrUZuW', 'rGUUURpkW1Uzf36Z3BlCsUlgOZ2K5qwCOuh14vSfMtVveKOKymTjouNE8BCn', '2018-09-14 03:49:07', '2018-09-14 03:49:07'),
+(4, 'Jack', 'jack@gmail.com', '$2y$10$DvvWtYtnNi68M2PCvSv2VORdNxB019kL.9cEOwO/UMeokumieEHmm', NULL, '2018-09-14 05:24:05', '2018-09-14 05:24:05'),
+(5, 'jill', 'jill@gmail.com', '$2y$10$WpNk3XKVSaq435cCIkB4m.zA8cMK8Qwb3PjgefSBK05z3hyVX04vu', NULL, '2018-09-14 05:26:17', '2018-09-14 05:26:17');
+
+--
+-- Triggers `users`
+--
+DELIMITER $$
+CREATE TRIGGER `userCount` AFTER INSERT ON `users` FOR EACH ROW UPDATE _counter
+SET count = COUNT + 1
+WHERE id = 1
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `viewsarestupid`
+-- (See below for the actual view)
+--
+CREATE TABLE `viewsarestupid` (
+`id` int(10) unsigned
+,`url` varchar(191)
+,`created_at` timestamp
+,`updated_at` timestamp
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `viewsarestupid2`
+-- (See below for the actual view)
+--
+CREATE TABLE `viewsarestupid2` (
+`id` int(10) unsigned
+,`name` varchar(191)
+,`url` varchar(191)
+,`created_at` timestamp
+,`updated_at` timestamp
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `_counter`
+--
+
+CREATE TABLE `_counter` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `count` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `_counter`
+--
+
+INSERT INTO `_counter` (`id`, `count`, `created_at`, `updated_at`) VALUES
+(1, 4, '2018-09-14 07:16:22', '2018-09-14 07:16:22');
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `lastview`
+--
+DROP TABLE IF EXISTS `lastview`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `lastview`  AS  select `gallery`.`id` AS `id`,`gallery`.`url` AS `url`,`gallery`.`thumburl` AS `thumburl`,`gallery`.`created_at` AS `created_at`,`gallery`.`updated_at` AS `updated_at` from `gallery` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `viewsarestupid`
+--
+DROP TABLE IF EXISTS `viewsarestupid`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `viewsarestupid`  AS  select `about_img`.`id` AS `id`,`about_img`.`url` AS `url`,`about_img`.`created_at` AS `created_at`,`about_img`.`updated_at` AS `updated_at` from `about_img` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `viewsarestupid2`
+--
+DROP TABLE IF EXISTS `viewsarestupid2`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `viewsarestupid2`  AS  select `certificates`.`id` AS `id`,`certificates`.`name` AS `name`,`certificates`.`url` AS `url`,`certificates`.`created_at` AS `created_at`,`certificates`.`updated_at` AS `updated_at` from `certificates` ;
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `about_img`
+--
+ALTER TABLE `about_img`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `catagories`
 --
 ALTER TABLE `catagories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `certificates`
+--
+ALTER TABLE `certificates`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -845,14 +1091,38 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Indexes for table `_counter`
+--
+ALTER TABLE `_counter`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `about_img`
+--
+ALTER TABLE `about_img`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `catagories`
 --
 ALTER TABLE `catagories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT for table `certificates`
+--
+ALTER TABLE `certificates`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `linker`
@@ -864,7 +1134,7 @@ ALTER TABLE `linker`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -876,6 +1146,12 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `_counter`
+--
+ALTER TABLE `_counter`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 

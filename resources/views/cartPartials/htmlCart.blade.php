@@ -46,7 +46,7 @@
             </ul>
             <div class="w-full">
                 <div class="header-cart-total w-full p-tb-40">
-                    @php($x = (double)$total*1000)
+                    @php($x = (double)$total + 200)
                     Items: {{$count}}<br/>
                     Subtotal: ${{$total}}<br/>
                     Shipping: $200.00<br/>

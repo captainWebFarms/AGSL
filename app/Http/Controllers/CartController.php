@@ -17,14 +17,14 @@ class CartController extends Controller
         Cart::add($id, $name, $qty, $price, ['img' => $img]);
         $cart = Cart::content();
         $count = Cart::count();
-        $total = Cart::subtotal();
+        $total = Cart::subtotal('2','.',' ');
         return view('cartPartials.htmlCart', compact('cart','count', 'total') );
     }
 
     public function load(){
 //                Cart::destroy();
         $count = Cart::count();
-        $total = Cart::subtotal();
+        $total = Cart::subtotal('2','.',' ');
         $cart = Cart::content();
         return view('cartPartials.htmlCart', compact('cart','count','total') );
     }
@@ -32,10 +32,27 @@ class CartController extends Controller
         $cart = Cart::content();
         return view('cartPartials.htmlCart', ['cart' => $cart] );
     }
-    public function update(){
+    public function updatePositve(Request $request){
+        $id = $request->id;
+        $qty = $request->qty;
+        $x = $qty + 1;
+        Cart::update($id, $x);
+        $count = Cart::count();
+        $total = Cart::subtotal('2','.',' ');
         $cart = Cart::content();
-        return view('cartPartials.htmlCart', ['cart' => $cart] );
+        return view('cartPartials.htmlCart', compact('cart','count','total') );
     }
+    public function updateNegative(Request $request){
+        $id = $request->id;
+        $qty = $request->qty;
+        $x = $qty - 1;
+        Cart::update($id, $x);
+        $count = Cart::count();
+        $total = Cart::subtotal('2','.',' ');
+        $cart = Cart::content();
+        return view('cartPartials.htmlCart', compact('cart','count','total') );
+    }
+
     public function destroy(){
         Cart::destroy();
         return 'cart destroyed';

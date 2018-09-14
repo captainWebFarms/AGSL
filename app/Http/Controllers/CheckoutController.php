@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Cart;
+use Auth;
+use DB;
 class CheckoutController extends Controller
 {
     //
@@ -12,6 +14,8 @@ class CheckoutController extends Controller
         $count = Cart::count();
         $cart = Cart::content();
         $total = Cart::subtotal();
-        return view('checkout',compact('cart','count','total'));
+        $gallery = DatabaseHandler::getGallery();
+        $user = Auth::user();
+        return view('checkout',compact('cart','count','total','gallery','user'));
     }
 }

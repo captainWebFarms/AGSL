@@ -9,26 +9,26 @@
 
                 <ul>
                     <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Women
+                        <a href="{{asset('/shop/Underground%20white%20LED%20strip%20lighting')}}" class="stext-107 cl7 hov-cl1 trans-04">
+                            Underground white LED strip lighting
                         </a>
                     </li>
 
                     <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Men
+                        <a href="{{asset('/shop/Safety%20system%20colored%20LED%20strip%20lighting')}}" class="stext-107 cl7 hov-cl1 trans-04">
+                            Safety system colored LED strip lighting
                         </a>
                     </li>
 
                     <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Shoes
+                        <a href="{{asset('/shop/CUSTOM%20LED%20STRIP%20LIGHTING%20SOLUTIONS')}}" class="stext-107 cl7 hov-cl1 trans-04">
+                            CUSTOM LED STRIP LIGHTING SOLUTIONS
                         </a>
                     </li>
 
                     <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Watches
+                        <a href="{{asset('/shop/Portable%20LED%20work%20lighting')}}" class="stext-107 cl7 hov-cl1 trans-04">
+                            Portable LED work lighting
                         </a>
                     </li>
                 </ul>
